@@ -1,0 +1,7 @@
+{
+  "name": "espSmartconfig",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
