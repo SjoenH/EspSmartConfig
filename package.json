@@ -24,6 +24,8 @@
     "@ionic-native/splash-screen": "~4.15.0",
     "@ionic-native/status-bar": "~4.15.0",
     "@ionic/storage": "2.2.0",
+    "cordova-android": "7.1.2",
+    "cordova-plugin-smartconfig": "git+https://github.com/IOCare/cordova-plugin-smartconfig.git",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -34,5 +36,10 @@
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-smartconfig": {}
+    }
+  }
 }

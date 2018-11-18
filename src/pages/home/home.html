@@ -1,14 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      EspSmartConfig Sample App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h1>v0.0.1</h1>
+  <ion-item>
+    <ion-label>SSID</ion-label>
+    <ion-input type="text" [(ngModel)]="network.ssid"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>BSSID</ion-label>
+    <ion-input type="text" [(ngModel)]="network.bssid"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="network.password"></ion-input>
+  </ion-item>
+  <button ion-button color="danger" (click)="doConfig()">
+    Do Config
+  </button>
+  <button ion-button color="danger" (click)="stopConfig()">
+    Stop Config
+  </button>
+  <div [innerHTML]="statusMessage"></div>
+
 </ion-content>
