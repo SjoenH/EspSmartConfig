@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
 
-declare var cordova: any;
-// declare var espSmartconfig: any;
+// declare var cordova: any;
+declare var espSmartconfig: any;
 // declare var window: any;
 
 @Component({
@@ -37,7 +37,7 @@ export class HomePage {
     const taskResultCountStr = 1;//,the count of device you want to config,for example:1
 
     // this.statusMessage =
-    cordova.plugins.espSmartconfig.startConfig(apSsid, apBssid, apPassword, isSsidHiddenStr, taskResultCountStr, res => {
+    espSmartconfig.startConfig(apSsid, apBssid, apPassword, isSsidHiddenStr, taskResultCountStr, res => {
       console.log("ESP:" + "Connected to ESP" + res);
       alert(res);
       // return "Connected to ESP";
@@ -52,7 +52,7 @@ export class HomePage {
   stopConfig() {
     console.log("ESP:" + "Stopping...");
     // this.statusMessage =
-    cordova.plugins.espSmartconfig.stopConfig(res => {
+    espSmartconfig.stopConfig(res => {
       console.log("ESP:" + res);
       // return res;
     }, error => {
